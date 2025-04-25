@@ -1,12 +1,7 @@
 <template>
   <div id="app">
     <nav>
-  
-  
     <router-link to="/"></router-link>
-  
-
-  
   <template v-if="walletStore.currentUser">
     <button>
       <router-link to="/trade">Trade</router-link>

@@ -1,4 +1,3 @@
-
 export const fetchCryptoPrices = async () => {
     try {
       const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,litecoin,ripple&vs_currencies=usd');
