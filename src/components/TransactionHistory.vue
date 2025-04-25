@@ -34,7 +34,7 @@
 
       <p>Total: ${{ newTotal.toFixed(2) }}</p>
 
-      <!-- Mostrar mensaje de error si hay alguno -->
+      
       <p v-if="errorMessage" class="error-message">{{ errorMessage }}</p>
 
       <button @click="saveEdit" class="btn save">💾 Save</button>
@@ -50,7 +50,7 @@ import { useWalletStore } from '@/store/useWalletStore';
 const walletStore = useWalletStore();
 const editingTransaction = ref(null);
 const editQuantity = ref(0);
-const errorMessage = ref(null); // Variable para almacenar el mensaje de error
+const errorMessage = ref(null); 
 
 const newTotal = computed(() => {
   if (!editingTransaction.value) return 0;
@@ -65,11 +65,10 @@ const startEdit = async (transaction) => {
     price: crypto ? crypto.price : transaction.price
   };
   editQuantity.value = transaction.quantity;
-  errorMessage.value = null; // Limpiar el mensaje de error cuando se empieza a editar
+  errorMessage.value = null; 
 };
 
 const saveEdit = async () => {
-  // Intentar editar la transacción
   const result = await walletStore.editTransaction({
     ...editingTransaction.value,
     quantity: editQuantity.value,
@@ -77,17 +76,15 @@ const saveEdit = async () => {
   });
 
   if (result.error) {
-    // Si hubo un error, mostrar el mensaje
     errorMessage.value = result.errorMessage;
   } else {
-    // Si la transacción se editó con éxito, limpiar la variable de error
     editingTransaction.value = null;
   }
 };
 
 const cancelEdit = () => {
   editingTransaction.value = null;
-  errorMessage.value = null; // Limpiar el mensaje de error cuando se cancela
+  errorMessage.value = null; 
 };
 </script>
 

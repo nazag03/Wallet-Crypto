@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import { useWalletStore } from '@/store/useWalletStore'; // Importamos el store
+import { useWalletStore } from '@/store/useWalletStore'; 
 import LoginView from '@/views/LoginView.vue';
 import TradeView from '@/views/TradeView.vue';
 import HistoryView from '@/views/HistoryView.vue';

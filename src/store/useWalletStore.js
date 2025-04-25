@@ -198,6 +198,6 @@ export const useWalletStore = defineStore('wallet', () => {
     removeTransaction,
     editTransaction,
     formattedBalance,
-    errorMessage, // 👈 no te olvides de usarla en el componente
+    errorMessage, 
   };
 });

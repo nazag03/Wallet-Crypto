@@ -20,11 +20,11 @@
     
     <div class="chart-section">
       <h2>📊 Crypto Price</h2>
-      <CryptoChart title="Bitcoin (BTC)" :dataPoints="[30000, 30500, 31000, 30800, 31500, 32000]" />
+      <CryptoChart title="Bitcoin (BTC)" :dataPoints="[30000, 31200, 31000, 30200, 31500, 32000]" />
       <CryptoChart title="Ethereum (ETH)" :dataPoints="[2000, 2050, 2100, 2080, 2120, 2150]" />
     </div>
 
-    <!-- Modal -->
+    
     <div v-if="showModal" class="modal">
       <div class="modal-content">
         <h2>{{ selectedAction === 'buy' ? 'Comprar' : 'Vender' }} {{ selectedCrypto.name }}</h2>
@@ -166,7 +166,7 @@ export default {
 }
 .chart-section {
   margin-top: 40px;
-  padding: 20px;
+  padding: 0px;
   background: #1f1f2f;
   border-radius: 10px;
   color: rgb(245, 245, 245);

@@ -1,6 +1,6 @@
 <template>
     <div class="sell-crypto">
-      <h2>Vender {{ selectedCrypto }}</h2>
+      <h2>Sell {{ selectedCrypto }}</h2>
       <p>Current price: ${{ cryptoPrice }}</p>
       <p>Available balance: {{ userCryptoBalance }} {{ selectedCrypto }}</p>
       <input v-model.number="amount" type="number" placeholder="Quantity to sell" min="0.01" step="0.01" />

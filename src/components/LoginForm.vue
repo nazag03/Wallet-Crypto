@@ -44,7 +44,6 @@ export default {
     const walletStore = useWalletStore();
 
     const submitForm = () => {
-      // Limpiar errores
       passwordError.value = '';
       confirmPasswordError.value = '';
 
